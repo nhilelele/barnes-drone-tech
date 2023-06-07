@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <title>Class Overview</title>
+            <style>
+
+                a:link, a:visited, a:active {
+                    text-decoration: none;
+                    font-family: 'Raleway', Arial, Helvetica, sans-serif;
+                    color: whitesmoke;
+                }
+
+                h1, h2 {
+                    font-family: 'Raleway', Arial, Helvetica, sans-serif;
+                    color: whitesmoke;
+                    position: static;
+                    margin-left: 20px;
+                    line-height: 15px;
+                 }
+
+                 #navbar {
+                    list-style-type: none;
+                    background-color: #D9D9D9;
+                    margin-left: -10px;
+                    margin-right: -10px;
+                    overflow: hidden;
+                }
+
+                #navbar a {
+                    float: left;
+                    display: block;
+                    color: #000000;
+                    padding: 14px 16px;
+                    text-decoration: none;
+                    font-size: 17px;
+                    margin-left: 20px;
+                    margin-right: 20px;
+                    display: flex;
+                    justify-content: space-around;
+                }
+
+                #navbar a:hover {
+                    color: white;
+                }
+
+                #navbar a.active{
+                    background-color: white;
+                    color: white;
+                }
+
+                .content {
+                    padding: 16px;
+                }
+
+                .content {
+                    padding: 16px;
+                }
+
+                .sticky {
+                    position: fixed;
+                    top: 0;
+                    width: 100%;
+                }
+
+                .sticky + .content {
+                    padding-top: 60px;
+                }
+
+                #desc {
+                    padding: 20px 50px 50px 50px;
+                }
+
+                article {
+                    margin-left: -8px;
+                    font-family: 'Raleway', Arial, Helvetica, sans-serif;
+                    color: white;
+                    font-size: 20px;
+                    display: flex;
+                    justify-content: space-between;
+                }
+
+                button {
+                    font-family: 'Raleway', Arial, Helvetica, sans-serif;
+                    font-size: 12px;
+                    color: black;
+                    background-color: #d9d9d9;
+                    padding: 10px 15px;
+                    border: solid 0px;
+                    border-radius: 15px;
+                    display: flex;
+                    align-items: center;
+                    text-transform: uppercase;
+                    }
+
+                 button:hover{
+                    padding: 10px 15px;
+                    background-color: #d9d9d9;
+                    color: whitesmoke;
+                    }
+
+                body { 
+                    background-image: url(Background.png);
+                    background-repeat: no-repeat;
+                    background-attachment: fixed;
+                    background-position: top;
+                    background-size: cover;
+                    color: white;
+                }
+            </style>
+        </head>
+
+        <body>
+            <header>
+                <h1><a href="home.html">Drone Technology I</a></h1>
+                <h2>Drone Technology I Class Overview</h2>
+            </header>
+
+            <div id="navbar">
+                <a href="classoverview.html">Class Overview</a>
+                <a href="forstudents.html">For Students</a>
+                <a href="forparents.html">For Parents</a>
+                <a href="about.html">About Mr. Barnes and SRMHS</a>
+            </div>
+
+            <article>
+                <img src="droneright.png" alt="Drone" width="1300">
+                <div id="desc">
+                    <p>ID11 Drone Technology I is a rigorous and relevant course, it is based on state and national content standards, and integrates technology to teach today’s generation of students. Business and industry representatives reviewed the standards and provided input on the content for this course as one that helps to prepare students for high-skill, high-wage, or in-demand occupational opportunities.</p>
+                </br>
+                    <p>As presented in the course, an understanding of Drone Technology is covered, including the following topics:</p>
+                    <ul>
+                        <li>Understanding drones</li>                   
+                        <li>Apply procedure to troubleshoot drone hardware</li>
+                        <li>Understand the requirements for FAA 14 CFR Part 107 and NCDOT UAS Operator Permit</li>
+                        <li>Apply procedures needed for basic drone flight</li>
+                    </ul>
+                </br>
+                    <button><a href="https://ncatech.org/courses/drone-technology-i/">Learn More</a></button>
+                </div>
+                <!--Can also add class policies & syllabus below here if needed-->
+            </article>
+
+            <script>
+                window.onscroll = function() {myFunction()};
+
+                var navbar = document.getElementById("navbar");
+                var sticky = navbar.offsetTop;
+
+                function myFunction() {
+                if (window.pageYOffset >= sticky) {
+                    navbar.classList.add("sticky")
+                } else {
+                    navbar.classList.remove("sticky");
+                }
+                }
+            </script>
+
+        </body>
+    </html>

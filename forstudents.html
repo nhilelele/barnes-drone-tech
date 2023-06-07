@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <title>For Students</title>
+            <style>
+
+                a:link, a:visited, a:active {
+                    text-decoration: none;
+                    font-family: 'Raleway', Arial, Helvetica, sans-serif;
+                    color: whitesmoke;
+                }
+
+                h1, h2 {
+                    font-family: 'Raleway', Arial, Helvetica, sans-serif;
+                    color: whitesmoke;
+                    position: static;
+                    margin-left: 20px;
+                    line-height: 15px;
+                 }
+
+                 #navbar {
+                    list-style-type: none;
+                    background-color: #D9D9D9;
+                    margin-left: -10px;
+                    margin-right: -10px;
+                    overflow: hidden;
+                }
+
+                #navbar a {
+                    float: left;
+                    display: block;
+                    color: #000000;
+                    padding: 14px 16px;
+                    text-decoration: none;
+                    font-size: 17px;
+                    margin-left: 20px;
+                    margin-right: 20px;
+                    display: flex;
+                    justify-content: space-around;
+                }
+
+                #navbar a:hover {
+                    color: white;
+                }
+
+                #navbar a.active{
+                    background-color: white;
+                    color: white;
+                }
+
+                .content {
+                    padding: 16px;
+                }
+
+                .content {
+                    padding: 16px;
+                }
+
+                .sticky {
+                    position: fixed;
+                    top: 0;
+                    width: 100%;
+                }
+
+                .sticky + .content {
+                    padding-top: 60px;
+                }
+
+                body { 
+                    background-image: url(Background.png);
+                    background-repeat: no-repeat;
+                    background-attachment: fixed;
+                    background-position: top;
+                    background-size: cover;
+                }
+
+                article {
+                    padding: 20px 50px 50px 20px;
+                    font-family: 'Raleway', Arial, Helvetica, sans-serif;
+                    font-size: 20px;
+                    color: whitesmoke;
+                }
+
+                #syllabus {
+                    color: black;
+                }
+
+                #resources {
+                    padding: 50px 50px 50px 50px;
+                    display: flex;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    justify-content: space-evenly;
+                }
+
+                #myImg {
+                    border-radius: 5px;
+                    cursor: pointer;
+                    transition: 0.3s;
+                }
+
+                #myImg:hover {
+                    opacity: 0.7;
+                }
+
+                .modal {
+                    display: none;
+                    position: fixed;
+                    z-index: 1;
+                    padding-top: 100px;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    overflow: auto;
+                    background-color: rgb(0, 0, 0);
+                    background-color: rgba(0, 0, 0, 0.9);
+                }
+
+                .modal-content {
+                    margin: auto;
+                    display: block;
+                    width: 80%;
+                    max-width: 700px;
+                }
+
+                #caption {
+                    margin: auto;
+                    display: block;
+                    width: 80%;
+                    max-width: 700px;
+                    text-align: center;
+                    color: whitesmoke;
+                    padding: 10px 0;
+                    height: 150px;
+                }
+
+                .modal-content, #caption {
+                    animation-name: zoom;
+                    animation-duration: 0.6s;
+                }
+
+                @keyframes zoom {
+                from {
+                    transform: scale(0)
+                }
+                to {
+                    transform: scale(1)
+                }
+                }
+
+                .close {
+                    position: absolute;
+                    top: 15px;
+                    right: 35px;
+                    color: #f1f1f1;
+                    font-size: 40px;
+                    font-weight: bold;
+                    transition: 0.3s;
+                }
+
+                .close:hover, .close:focus {
+                    color: #bbb;
+                    text-decoration: none;
+                    cursor: pointer;
+                }
+
+                @media only screen and (max-width: 700px) {
+                .modal-content {
+                    width: 100%;
+                }
+                }
+            </style>
+        </head>
+
+        <body>
+            <header>
+                <h1><a href="home.html">Drone Technology I</a></h1>
+                <h2>Student Resources</h2>
+            </header>
+
+            <div id="navbar">
+                <a href="classoverview.html">Class Overview</a>
+                <a href="forstudents.html">For Students</a>
+                <a href="forparents.html">For Parents</a>
+                <a href="about.html">About Mr. Barnes and SRMHS</a>
+            </div>
+
+            <article>
+                <p>
+                    Click on the images to view resources.
+                </br>
+                    Click <a id="syllabus" href="hypotheticallinkforsyllabus.pdf">here</a> to view syllabus.
+                </p>
+
+                <div id="resources">
+                    <img class="myImages" id="myImg" src="PAVEmodel.png" alt="PAVE Model to Identify Hazards" width="400">
+                    <img class="myImages" id="myImg" src="DECIDEmodel.png" alt="DECIDE Model to Analyze Risk" width="400">
+                    <img class="myImages" id="myImg" src="PhoneticAlphabet.png" alt="Phonetic Alphabet" width="400">
+                    <!--I am not sure if pdfs of these books are available for students, so I am going to assume that you can only get the physical copies.-->
+                    <img class="myImages" id="myImg" src="PilotsHandbook.png" alt="Pilots Handbook of Aeronautical Knowledge - please pick up a copy from class." width="400">
+                    <img class="myImages" id="myImg" src="AirmansKnowledge.png" alt="Airman Knowledge Testing Supplement for Sport Pilot, Recreational Pilot, Remote Pilot, and Private Pilot - please pick up a copy from class." width="400">
+                    <div id="myModal" class="modal">
+                    <span class="close">&times;</span>
+                    <img class="modal-content" id="img01">
+                    <div id="caption"></div>
+                    </div>
+                </div>
+
+            </article>
+
+            <script>
+
+                window.onscroll = function() {myFunction()};
+
+                    var navbar = document.getElementById("navbar");
+                    var sticky = navbar.offsetTop;
+
+                    function myFunction() {
+                    if (window.pageYOffset >= sticky) {
+                        navbar.classList.add("sticky")
+                    } else {
+                        navbar.classList.remove("sticky");
+                    }
+                    }
+
+            var modal = document.getElementById('myModal');
+            var images = document.getElementsByClassName('myImages');
+            var modalImg = document.getElementById("img01");
+            var captionText = document.getElementById("caption");
+
+            for (var i = 0; i < images.length; i++) {
+            var img = images[i];
+            img.onclick = function(evt) {
+                console.log(evt);
+                modal.style.display = "block";
+                modalImg.src = this.src;
+                captionText.innerHTML = this.alt;
+            }
+            }
+
+            var span = document.getElementsByClassName("close")[0];
+
+            span.onclick = function() {
+            modal.style.display = "none";
+            }
+
+            </script>
+        </body>
+    </html>

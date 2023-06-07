@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <title>About Mr. Barnes and SRMHS</title>
+            <style>
+
+                a:link, a:visited, a:active {
+                    text-decoration: none;
+                    font-family: 'Raleway', Arial, Helvetica, sans-serif;
+                    color: whitesmoke;
+                }
+
+                h1, h2 {
+                    font-family: 'Raleway', Arial, Helvetica, sans-serif;
+                    color: whitesmoke;
+                    position: static;
+                    margin-left: 20px;
+                    line-height: 15px;
+                 }
+
+                #topright {
+                    position: absolute;
+                    top: 8px;
+                    right: 16px;
+                }
+
+                #navbar {
+                    list-style-type: none;
+                    background-color: #D9D9D9;
+                    margin-left: -10px;
+                    margin-right: -10px;
+                    overflow: hidden;
+                }
+
+                #navbar a {
+                    float: left;
+                    display: block;
+                    color: #000000;
+                    padding: 14px 16px;
+                    text-decoration: none;
+                    font-size: 17px;
+                    margin-left: 20px;
+                    margin-right: 20px;
+                    display: flex;
+                    justify-content: space-around;
+                }
+
+                #navbar a:hover {
+                    color: white;
+                }
+
+                #navbar a.active{
+                    background-color: white;
+                    color: white;
+                }
+
+                .content {
+                    padding: 16px;
+                }
+
+                .sticky {
+                    position: fixed;
+                    top: 0;
+                    width: 100%;
+                }
+
+                .sticky + .content {
+                    padding-top: 60px;
+                }
+
+                body { 
+                    background-image: url(Background.png);
+                    background-repeat: no-repeat;
+                    background-attachment: fixed;
+                    background-position: top;
+                    background-size: cover;
+                }
+
+               #barnesIntro, #srmhsIntro {
+                    padding: 20px 50px 50px 20px;
+                    font-family: 'Raleway', Arial, Helvetica, sans-serif;
+                    color: whitesmoke;
+                    font-size: 20px;
+                    display: flex;
+                    justify-content: space-between;
+                }
+
+                button {
+                    font-family: 'Raleway', Arial, Helvetica, sans-serif;
+                    font-size: 12px;
+                    color: black;
+                    background-color: #d9d9d9;
+                    padding: 10px 15px;
+                    border: solid 0px;
+                    border-radius: 15px;
+                    display: flex;
+                    align-items: center;
+                    text-transform: uppercase;
+                    }
+
+                 button:hover{
+                    padding: 10px 15px;
+                    background-color: #d9d9d9;
+                    color: whitesmoke;
+                    }
+
+            </style>
+        </head>
+        <body>
+            <header>
+                <h1><a href="home.html">Drone Technology I</a></h1>
+                <h2>About Mr. Barnes and SRMHS</h2>
+            </header>
+
+            <div id="navbar">
+                <a href="classoverview.html">Class Overview</a>
+                <a href="forstudents.html">For Students</a>
+                <a href="forparents.html">For Parents</a>
+                <a href="about.html">About Mr. Barnes and SRMHS</a>
+            </div>
+
+            <article>
+                <div id="barnesIntro">
+                    <!--This text below is an introduction of yourself, feel free to edit between <p> and </p>-->
+                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+                    </p>
+                    <img id="barnesPic" src="placeholder.png" alt="Placeholder for Mr. Barnes">
+                </div>
+                <div id="srmhsIntro">
+                    <img id="srmhsPic" src="srmhslogo.png" alt="SRMHS Logo">
+                    <div id="desc">
+                        <p>Founded in 1997, Southeast Raleigh Magnet High School (SRMHS) is one of 26 high schools within the Wake County Public School System (WCPSS), four being magnet schools. SRMHS is a comprehensive magnet with the theme University Connections: School of Design, Arts & Engineering. WCPSS is recognized as one of the best school systems statewide and nationally.
+                        </br>
+                        </br>
+                        As freshmen, students are introduced to the four pathways through University Connections, an exploratory course for all ninth grade students. Upon completion of University Connections, students declare their pathway of either Design, Arts, Engineering, or Humanities. Although students choose a pathway, they are still allowed to take courses outside of the pathway chosen. All students have access to our programs that include three Career PLTW Academies (NAF Engineering, Biomedical, and Information Technology & Cybersecurity), Visual & Digital Arts, Performing Arts, and Athletics.
+                        </p>
+                    </br>
+                        <button><a href="https://www.wcpss.net/southeastraleighhs">Learn More</button>
+                    </div>
+                </div>    
+                    </div>
+            </article>
+
+            <script>
+                window.onscroll = function() {myFunction()};
+
+                var navbar = document.getElementById("navbar");
+                var sticky = navbar.offsetTop;
+
+                function myFunction() {
+                if (window.pageYOffset >= sticky) {
+                    navbar.classList.add("sticky")
+                } else {
+                    navbar.classList.remove("sticky");
+                }
+                }
+            </script>
+
+        </body>
+    </html>
